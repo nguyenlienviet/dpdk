@@ -2,8 +2,8 @@
  * Copyright(C) 2021 Marvell.
  */
 
-#ifndef _CNXK_BPHY_H_
-#define _CNXK_BPHY_H_
+#ifndef _RTE_PMD_CNXK_BPHY_H_
+#define _RTE_PMD_CNXK_BPHY_H_
 
 #include <stdint.h>
 
@@ -889,4 +889,4 @@ int rte_pmd_bphy_sso_pf_func_get_rmt(uint16_t *pf_func);
 }
 #endif
 
-#endif /* _CNXK_BPHY_H_ */
+#endif /* _RTE_PMD_CNXK_BPHY_H_ */

@@ -8,6 +8,7 @@
 
 #include <roc_api.h>
 
+#include "cnxk_bphy.h"
 #include "cnxk_bphy_irq.h"
 
 static struct bphy_device *
@@ -87,7 +88,7 @@ cnxk_bphy_intr_unregister(uint16_t dev_id, int irq_num)
 	if (bphy_dev->irq_chip)
 		roc_bphy_intr_clear(bphy_dev->irq_chip, irq_num);
 	else
-		plt_err("Missing irq chip");
+		BPHY_LOG(ERR, "Missing irq chip");
 }
 
 struct cnxk_bphy_mem *

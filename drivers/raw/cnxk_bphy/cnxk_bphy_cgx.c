@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include <bus_pci_driver.h>
+#include <rte_log.h>
 #include <rte_rawdev.h>
 #include <rte_rawdev_pmd.h>
 
@@ -189,7 +190,7 @@ cnxk_bphy_cgx_process_buf(struct cnxk_bphy_cgx *cgx, unsigned int queue,
 
 	/* get rid of last response if any */
 	if (qp->rsp) {
-		RTE_LOG(WARNING, PMD, "Previous response got overwritten\n");
+		BPHY_CGX_LOG(WARNING, "Previous response got overwritten");
 		rte_free(qp->rsp);
 	}
 	qp->rsp = rsp;
@@ -379,3 +380,4 @@ static struct rte_pci_driver bphy_cgx_rawdev_pmd = {
 RTE_PMD_REGISTER_PCI(cnxk_bphy_cgx_rawdev_pci_driver, bphy_cgx_rawdev_pmd);
 RTE_PMD_REGISTER_PCI_TABLE(cnxk_bphy_cgx_rawdev_pci_driver, cnxk_bphy_cgx_map);
 RTE_PMD_REGISTER_KMOD_DEP(cnxk_bphy_cgx_rawdev_pci_driver, "vfio-pci");
+RTE_LOG_REGISTER_DEFAULT(bphy_cgx_rawdev_logtype, INFO);
