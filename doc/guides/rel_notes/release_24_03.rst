@@ -60,6 +60,7 @@ New Features
   * Optimize mbuf rearm sequence.
   * Updated Tx queue mbuf free thresholds from 128 to 256 for better performance.
   * Added optimized SSE Rx routines.
+  * Added optimized AVX2 Rx routines.
 
 
 Removed Items
