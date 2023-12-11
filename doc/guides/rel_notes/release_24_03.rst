@@ -55,6 +55,11 @@ New Features
      Also, make sure to start the actual text at the margin.
      =======================================================
 
+* **Updated Marvell Octeon ep driver.**
+
+  * Optimize mbuf rearm sequence.
+  * Updated Tx queue mbuf free thresholds from 128 to 256 for better performance.
+
 
 Removed Items
 -------------
