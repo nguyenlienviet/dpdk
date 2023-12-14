@@ -55,6 +55,10 @@ New Features
      Also, make sure to start the actual text at the margin.
      =======================================================
 
+* **Updated NVIDIA mlx5 driver.**
+
+  * Added support for accumulating from src field to dst field.
+
 
 Removed Items
 -------------
