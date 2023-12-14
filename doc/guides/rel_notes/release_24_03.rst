@@ -62,6 +62,9 @@ New Features
   * Added optimized SSE Rx routines.
   * Added optimized AVX2 Rx routines.
 
+* **Updated Marvell cnxk net driver.**
+
+  * Added support for ``RTE_FLOW_ITEM_TYPE_PPPOES`` flow item.
 
 Removed Items
 -------------
